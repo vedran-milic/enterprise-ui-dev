@@ -18,6 +18,18 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
+      - run: npm format:check
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
       - run: npm test
   build:
     runs-on: ubuntu-latest
