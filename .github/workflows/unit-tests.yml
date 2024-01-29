@@ -18,7 +18,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
-      - run: npm format:check
+      - run: npm run format:check
   unit-test:
     runs-on: ubuntu-latest
     steps:
