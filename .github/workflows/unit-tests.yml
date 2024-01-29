@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  unit-test:
+  prettier:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
